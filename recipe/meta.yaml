@@ -1,15 +1,15 @@
 {% set name = "libnetworkit" %}
-{% set version = "6.1" %}
+{% set version = "7.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "22c953ea1054c356663b31c77114c2f0c8fec17e0e707aeec23026241beab9b2" %}
+{% set hash_value = "4faf16c5fae3e14d3c1b6f30e25c6e093dcf6a3dbf021235f3161ac2a527f682" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  - url: 'https://github.com/networkit/networkit/archive/{{version}}.tar.gz'
-    {{hash_type}}: {{hash_value}}
+  - url: 'https://github.com/networkit/networkit/archive/{{ version }}.tar.gz'
+    {{ hash_type }}: {{ hash_value }}
 
 package:
   name: {{ name|lower }}
