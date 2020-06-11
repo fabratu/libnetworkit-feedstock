@@ -8,8 +8,8 @@ package:
   version: '{{ version }}'
 
 source:
-  - url: 'https://github.com/networkit/networkit/archive/{{version}}.tar.gz'
-    {{hash_type}}: {{hash_value}}
+  - url: 'https://github.com/networkit/networkit/archive/{{ version }}.tar.gz'
+    {{ hash_type }}: {{ hash_value }}
 
 package:
   name: {{ name|lower }}
