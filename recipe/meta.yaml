@@ -1,7 +1,7 @@
 {% set name = "libnetworkit" %}
-{% set version = "8.0" %}
+{% set version = "8.1" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "cdf9571043edbe76c447622ed33efe9cba2880f887ca231d98f6d3c22027e20e" %}
+{% set hash_value = "0a22eb839606b9fabfa68c7add12c4de5eee735c6f8bb34420e5916ce5d7f829" %}
 
 package:
   name: '{{ name|lower }}'
