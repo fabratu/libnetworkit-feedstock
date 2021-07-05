@@ -32,13 +32,17 @@ test:
   commands:
     # Verify headers are present
     - test -f $PREFIX/include/networkit/Globals.hpp  # [unix]
+    - test -f %LIBRARY_PREFIX%\include\networkit\Globals.hpp  # [win]
 
     # Verify pkg-config file is present
     - test -f $PREFIX/lib/pkgconfig/networkit.pc  # [unix]
+    - test -f %LIBRARY_PREFIX%\lib\pkgconfig\networkit.pc  # [win]
 
     # Verify shared library is present
     - test -f $PREFIX/lib/libnetworkit.so  # [linux]
     - test -f $PREFIX/lib/libnetworkit.dylib  # [osx]
+    - test -f %LIBRARY_PREFIX%\lib\networkit.lib  # [win]
+    - test -f %LIBRARY_PREFIX%\lib\networkit\networkit_state.dll  # [win]
 
     # conda tools
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
