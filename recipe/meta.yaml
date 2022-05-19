@@ -1,7 +1,7 @@
 {% set name = "libnetworkit" %}
-{% set version = "9.1.1" %}
+{% set version = "10.0" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "0376b3b7b8ba1fefb46549c7dd2cf979237a24708293715b1da92b4da272a742" %}
+{% set hash_value = "77187a96dea59e5ba1f60de7ed63d45672671310f0b844a1361557762c2063f3" %}
 
 package:
   name: '{{ name|lower }}'
@@ -10,6 +10,9 @@ package:
 source:
   - url: 'https://github.com/networkit/networkit/archive/{{ version }}.tar.gz'
     {{ hash_type }}: {{ hash_value }}
+  - git_url: https://github.com/networkit/ttmath
+    git_depth: 1
+    folder: extlibs/ttmath
 
 package:
   name: {{ name|lower }}
