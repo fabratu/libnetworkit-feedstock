@@ -8,7 +8,7 @@ cmake -LAH -G "Ninja" ^
     -DCMAKE_PREFIX_PATH="%LIBRARY_PREFIX%" ^
     -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
     -DNETWORKIT_STATIC=ON ^
-    -DNETWORKIT_EXT_TLX="%CONDA_PREFIX%\Library" ^
+    -DNETWORKIT_EXT_TLX="%PREFIX%\Library" ^
     ..
 
 if errorlevel 1 exit 1
