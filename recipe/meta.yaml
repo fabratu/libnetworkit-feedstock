@@ -24,7 +24,8 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cmake  >=3.6
+    - {{ stdlib("c") }}
+    - cmake  >=3.12
     - make
     - llvm-openmp  # [osx]
   host:
