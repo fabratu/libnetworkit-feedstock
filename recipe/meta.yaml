@@ -14,10 +14,6 @@ source:
     git_depth: 1
     folder: extlibs/ttmath
 
-package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
 build:
   number: 0
 
