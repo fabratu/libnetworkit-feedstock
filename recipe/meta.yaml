@@ -1,7 +1,7 @@
 {% set name = "libnetworkit" %}
-{% set version = "11.0" %}
+{% set version = "11.0.1" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "3cba54b384db4adfd88c984805647a3b74ed52168b6178cba6dd58f1cbd73120" %}
+{% set hash_value = "fbdc86b6ac6486ce4e0898f386c5371bd07b9a420293306f2e632549378f4b86" %}
 
 package:
   name: '{{ name|lower }}'
@@ -14,17 +14,14 @@ source:
     git_depth: 1
     folder: extlibs/ttmath
 
-package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
 build:
   number: 0
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - cmake  >=3.6
+    - {{ stdlib("c") }}
+    - cmake  >=3.12
     - make
     - llvm-openmp  # [osx]
   host:
